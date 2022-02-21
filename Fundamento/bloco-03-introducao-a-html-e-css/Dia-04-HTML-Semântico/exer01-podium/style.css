@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+}
+
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+}
+
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+}
+
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+}
+     
+ul {
+  list-style: none;
+}
+
+li.second, li.third{
+  display: inline-block;
+  position: relative;
+  left: 23%;
+  width: 150px;
+}
+
+li.first{
+  margin-right:300px;
+  margin-left: 200px;
+}
+
+li.second{
+  text-align:center;
+}
+
+#center{
+  display: inline-block;
+  position: relative;
+  text-align: center; 
+  left: 110px;
+}

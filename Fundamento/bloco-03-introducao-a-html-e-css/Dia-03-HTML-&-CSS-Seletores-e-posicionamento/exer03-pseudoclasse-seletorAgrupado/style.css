@@ -1,0 +1,16 @@
+h1,p {
+  text-align: center;
+}
+
+li:hover{
+  background-color:coral ;
+  width: max-content;
+}
+
+li:active{
+  font-size: 20px;
+}
+
+ul{
+  list-style: none;
+}

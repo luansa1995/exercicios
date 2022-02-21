@@ -1,0 +1,37 @@
+div:hover{
+  border: solid black 2px;
+}
+
+
+
+.p{
+  background-color: red;
+}
+
+.s{
+  background-color: orange;
+}
+
+.c{
+  background-color: #97e7cd;
+  font-size: 30px;
+  
+}
+
+.e{
+  background-color: rgb(1, 16, 153);
+  color: aliceblue;
+}
+
+.cl{
+  background-color: rgb(165, 247, 132);
+}
+
+h3{
+  font-family: 'Euphoria Script', cursive;
+}
+
+
+.p, .c, .cl{
+  font-style: italic;
+}

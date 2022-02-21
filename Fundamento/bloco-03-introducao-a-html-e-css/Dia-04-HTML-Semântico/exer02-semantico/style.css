@@ -1,0 +1,185 @@
+*{
+  margin:0;
+  padding:0;
+  border:0;
+  
+}
+
+body{
+  background-color: powderblue;
+}
+
+main {
+  font-size: 20px;
+}
+
+
+
+header{
+  display: inline-block;
+  background-color: orange;
+  width: 20%;
+  /* padding-bottom: 1px;
+  margin-left: 20px;
+  border-radius: 15px; */
+  
+
+}
+
+nav{
+  background-color: blue;
+  display: inline-block;
+  width: 70%;
+  text-align: center;
+  border-radius: 15px;
+  vertical-align: top;
+}
+
+nav ul li{
+  
+  display: inline-block;
+  width: 100px;
+  list-style:none;
+ 
+}
+
+
+
+#maincontent{
+  text-align: center; 
+  margin-top: 10px;
+  margin: 10px;
+
+}
+
+.img01{
+  margin-top: 30px;
+  width: 200px;
+  border-radius: 45px;
+  
+}
+
+.img02{
+  padding: 20px;
+}
+
+
+h2{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+p{
+  text-align: justify;
+  text-justify: inter-word;
+  
+}
+
+.p{
+  text-align: center;
+}
+
+#left{
+  /* background-color: blueviolet; */
+
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 55%;
+  /* margin-top: 8px; */
+  padding-right: 8px;
+
+  margin-right: 30px;
+  padding-top: 10px;
+}
+#propaganda{
+  background-color: chocolate;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 30%;
+  border: solid 1px black;  
+  margin-top: 30px;
+  vertical-align: top;
+  padding-bottom: 40px;
+ 
+}
+
+table tr td{
+  text-align: center;
+  padding: 26px;
+  
+}
+
+/* .teste01{
+  
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  border: solid 8px black;  
+  
+ 
+  
+}
+
+.teste02{
+  background-color: chocolate;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 30%;
+  border: solid 15px black;  
+  margin-top: 30px;
+  vertical-align: top;
+  padding-bottom: 40px;
+  vertical-align: top;
+
+} */
+
+
+
+a{
+  text-decoration: none;
+  color: yellow;
+  border: dotted yellow 2px;
+  border-radius: 15px;
+  padding: 2px;
+}
+
+.a{
+  padding: 0px 180px 0px 180px;
+  
+}
+
+/* #tabela{
+  display: inline-block;
+  position: relative;
+  border: solid 1px black;
+  width: 400px;
+  
+}
+
+.teste{
+  display: inline;
+  position: relative;
+  width: 600px;
+  border: solid 1px black;  
+} */
+
+
+.teste{
+display: inline-block;
+position: relative;
+width: 750px;
+padding-left: 40px;
+
+}
+
+table{
+  vertical-align: top;
+  display: inline-block;
+  margin-left:140px;
+  margin-top: 10px;
+  border: dotted 2px #894bcf;
+}
