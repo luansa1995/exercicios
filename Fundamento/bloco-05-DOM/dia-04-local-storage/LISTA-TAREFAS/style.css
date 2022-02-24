@@ -23,5 +23,14 @@ main {
 
 input {
   width: 50%;
-  
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.botao-lixo {
+  /* position: relative; */
+  /* margin-left: 80%; */
 }
