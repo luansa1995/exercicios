@@ -21,7 +21,8 @@ function addTarefa () {
     newTagButton.addEventListener("click", removeTask);
     newTagSpan.innerText = whereInput.value;  //
     newTagLi.appendChild(newTagSpan);
-    newTagLi.addEventListener("mouseover", setBorder);     
+    newTagLi.addEventListener("mouseover", setBorder);
+    newTagLi.addEventListener("mouseout", takeItOutBorder);       
     newTagSpan.className = "span";
     newTagSpan.addEventListener("dblclick", setStrike);
     newTagLi.appendChild(newTagButton);
@@ -39,22 +40,23 @@ function removeTask (event) {
 
 // whereLi.addEventListener("click", strike);
 function setStrike (event){
-     if(event.target.className == "span"){
-        event.target.classList.add("strike");
-    }else {
-        event.target.classList.remove("strike");
-    }
+    if(event.target.classList == "span border"){
+            event.target.classList.add("strike");
+        } else  {
+            event.target.classList.remove("strike");
+        }
 
 }
 
 function setBorder (event){
-    if(event.target.className == "span"){
-       event.target.classList.add("border");
-   }else {
-       event.target.classList.remove("border");
-   }
+    // if(event.target.className == "span strike"){
+    event.target.classList.add("border");
+    // } else if (event.target.className == "span")
 }
 
+function takeItOutBorder (event){
+    event.target.classList.remove("border");
+}
 
 //PARTE 2 - creando elemento e jogando no HTML
 //q01
