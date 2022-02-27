@@ -2,26 +2,57 @@
 let whereButton = document.querySelector("button");
 let whereInput = document.querySelector("input");
 let whereUl = document.querySelector("ul");
+let newTagLi = document.createElement("li");   // repetido
+
+//PROVEVEL Q NAO USEI ESSES 2 ABAIXO
+let whereLi = document.getElementsByTagName("li");
+let whereSpan = document.querySelectorAll(".span");
+// let whereTeste = document.getElementsByClassName("teste");
 
 
-whereButton.addEventListener("click", addTarefa)
+whereButton.addEventListener("click", addTarefa);
 
 function addTarefa () {
-    //let contentOfElement = "Texto de teste, depois vira parametro da minha funçao";
     let newTagLi = document.createElement("li");
+    let newTagSpan = document.createElement("span");
     let newTagButton = document.createElement("button");
     newTagButton.setAttribute("class", "botao-lixo");
-    newTagButton.innerText = "lixo";
+    newTagButton.innerText = "Delete";
     newTagButton.addEventListener("click", removeTask);
-    newTagLi.innerText = whereInput.value;
+    newTagSpan.innerText = whereInput.value;  //
+    newTagLi.appendChild(newTagSpan);
+    newTagLi.addEventListener("mouseover", setBorder);     
+    newTagSpan.className = "span";
+    newTagSpan.addEventListener("dblclick", setStrike);
     newTagLi.appendChild(newTagButton);
     whereUl.appendChild(newTagLi);
-    whereInput.value = ""; 
+    whereInput.value = "";  
+}
+
+function removeTask (event) {
+//   let whereLi = document.getElementsByTagName("li");
+//   let indexArray = indexOf(event.target);
+//   whereLi.splice(indexArray, 1); 
+    event.target.parentNode.remove();
 }
 
 
-function removeTask () {
-    // event.target.
+// whereLi.addEventListener("click", strike);
+function setStrike (event){
+     if(event.target.className == "span"){
+        event.target.classList.add("strike");
+    }else {
+        event.target.classList.remove("strike");
+    }
+
+}
+
+function setBorder (event){
+    if(event.target.className == "span"){
+       event.target.classList.add("border");
+   }else {
+       event.target.classList.remove("border");
+   }
 }
 
 
@@ -43,3 +74,23 @@ function removeTask () {
 
 //5° e ultimo passo - JOGAR NO HTML >>> "Jogue em ondeEstou que foi o local selecionado e crie newTag (q ja tem a tag div+ o texto)"
 //ondeEstou.appendChild(newTag);
+
+
+
+
+
+
+
+
+
+
+// whereTeste.addEventListener("mouseover", strikeThrough);
+
+
+// let whereTeste = document.getElementsByClassName("teste");
+//     whereTeste.addEventListener("click", strike);
+//     function strike (event){
+    
+//         event.target.setAttribute("class", "strike");
+//         // event.target.className = "strike";
+//     }

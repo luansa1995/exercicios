@@ -16,8 +16,8 @@ main {
   text-align: center;
   margin-left: auto;
   margin-right: auto; 
-  margin-top: auto;
-  margin-bottom: auto;
+  /* margin-top: auto;
+  margin-bottom: auto; */
   padding-bottom: 30px;
 }
 
@@ -28,9 +28,26 @@ input {
 li {
   list-style: none;
   text-align: left;
+  margin-bottom: 5px;
 }
 
+span {
+  display: inline-block;
+  /* apagar daki pra baixo */
+  width: 80%;
+ }
+
 .botao-lixo {
-  /* position: relative; */
-  /* margin-left: 80%; */
+  display: inline-block;
+  /* margin-right: 10 px; */
+
+}
+
+.strike {
+  text-decoration:line-through ;
+  color: black;
+}
+
+.border {
+  border: solid 2px black;
 }
