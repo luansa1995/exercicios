@@ -2,7 +2,10 @@
 let whereButton = document.querySelector("button");
 let whereInput = document.querySelector("input");
 let whereUl = document.querySelector("ul");
+    whereUl.className = "no-border";
 let newTagLi = document.createElement("li");   // repetido
+ let ii=1; 
+let arrayTask = [];
 
 //PROVEVEL Q NAO USEI ESSES 2 ABAIXO
 let whereLi = document.getElementsByTagName("li");
@@ -27,7 +30,21 @@ function addTarefa () {
     newTagSpan.addEventListener("dblclick", setStrike);
     newTagLi.appendChild(newTagButton);
     whereUl.appendChild(newTagLi);
-    whereInput.value = "";  
+
+    //deixando desativado pois nao criei nada pra limpar o local storage e ai acabar acumulando
+    function adicionar() {
+        localStorage.setItem(JSON.stringify("task"+ii), whereInput.value);
+       //  alert("Item adicionado.");
+        ii+=1;
+    }
+    // adicionar();
+    //deixando desativado pois nao criei nada pra limpar o local storage e ai acabar acumulando
+
+ 
+    // i+=1;
+    whereInput.value = "";
+        // localStorage.clear();
+
 }
 
 function removeTask (event) {
@@ -40,7 +57,7 @@ function removeTask (event) {
 
 // whereLi.addEventListener("click", strike);
 function setStrike (event){
-    if(event.target.classList == "span border"){
+    if(event.target.classList == "span"){
             event.target.classList.add("strike");
         } else  {
             event.target.classList.remove("strike");
@@ -50,13 +67,32 @@ function setStrike (event){
 
 function setBorder (event){
     // if(event.target.className == "span strike"){
-    event.target.classList.add("border");
+    event.target.parentNode.classList.add("border");
     // } else if (event.target.className == "span")
 }
 
 function takeItOutBorder (event){
-    event.target.classList.remove("border");
+    event.target.parentNode.classList.remove("border");
 }
+
+// function createArray(){
+ 
+//     let whereSpanTwo = document.getElementsByTagName("span");
+
+//     let myArrayOfTasks = [];
+    
+//     // for(let i=0 ; i<whereSpanTwo.length ; i+=1){
+//     //     myArrayOfTasks.push(whereSpanTwo[i]);
+//     //     //erro >>> VM7432:1 Uncaught ReferenceError: myArrayOfTasks is not defined at <anonymous>:1:1
+//     // }
+
+    
+
+//     for (key of whereSpanTwo){
+//         localStorage.setItem('list_task', JSON.stringify(whereSpanTwo[indexOf(key)]));
+//     } 
+// }
+
 
 //PARTE 2 - creando elemento e jogando no HTML
 //q01

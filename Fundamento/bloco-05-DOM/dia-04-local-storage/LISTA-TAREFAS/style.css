@@ -29,6 +29,8 @@ li {
   list-style: none;
   text-align: left;
   margin-bottom: 5px;
+  /* max-width: 90%; */
+  padding-right: -10px;
 }
 
 span {
@@ -49,5 +51,10 @@ span {
 }
 
 .border {
-  border: solid 2px black;
+  border: dotted 2px black;
+  
+}
+
+.no-border {
+  border: none;
 }

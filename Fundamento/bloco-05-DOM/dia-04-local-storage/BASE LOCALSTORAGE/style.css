@@ -1,0 +1,12 @@
+
+* {
+  margin: 0;
+}
+
+main {
+  width: 80%;
+  border: solid black 2px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
