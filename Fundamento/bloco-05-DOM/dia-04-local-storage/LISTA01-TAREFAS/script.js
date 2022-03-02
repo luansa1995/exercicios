@@ -4,8 +4,11 @@ let whereInput = document.querySelector("input");
 let whereUl = document.querySelector("ul");
     whereUl.className = "no-border";
 let newTagLi = document.createElement("li");   // repetido
+let whereOl = document.querySelector('ol');
  let ii=1; 
-let arrayTask = [];
+let arrayOfTasks = [];
+
+
 
 //PROVEVEL Q NAO USEI ESSES 2 ABAIXO
 let whereLi = document.getElementsByTagName("li");
@@ -13,45 +16,96 @@ let whereSpan = document.querySelectorAll(".span");
 // let whereTeste = document.getElementsByClassName("teste");
 
 
-whereButton.addEventListener("click", addTarefa);
+whereButton.addEventListener("click", addTarefa);  // mudar pra addtask
 
-function addTarefa () {
+function addTarefa () {  // mudar pra addtask   anto pro DOM quanto pro STORAGE
     let newTagLi = document.createElement("li");
     let newTagSpan = document.createElement("span");
     let newTagButton = document.createElement("button");
+   
     newTagButton.setAttribute("class", "botao-lixo");
     newTagButton.innerText = "Delete";
     newTagButton.addEventListener("click", removeTask);
-    newTagSpan.innerText = whereInput.value;  //
-    newTagLi.appendChild(newTagSpan);
-    newTagLi.addEventListener("mouseover", setBorder);
-    newTagLi.addEventListener("mouseout", takeItOutBorder);       
-    newTagSpan.className = "span";
-    newTagSpan.addEventListener("dblclick", setStrike);
-    newTagLi.appendChild(newTagButton);
-    whereUl.appendChild(newTagLi);
+    newTagSpan.innerText = whereInput.value;  // preenche com texto
+    arrayOfTasks.push(whereInput.value);      // preenchendo array pro addStorage()
+   
+   
+            newTagLi.appendChild(newTagSpan);
+            newTagLi.addEventListener("mouseover", setBorder);
+            newTagLi.addEventListener("mouseout", takeItOutBorder);       
+            newTagSpan.className = "span";
+            newTagSpan.addEventListener("dblclick", setStrike);
+            newTagLi.appendChild(newTagButton);
+            whereUl.appendChild(newTagLi);
+            // console.log(whereSpan.innerText);
+
+    //mostrar lista na parte do STORAGE
+
 
     //deixando desativado pois nao criei nada pra limpar o local storage e ai acabar acumulando
-    function adicionar() {
-        localStorage.setItem(JSON.stringify("task"+ii), whereInput.value);
-       //  alert("Item adicionado.");
-        ii+=1;
-    }
+    
     // adicionar();
     //deixando desativado pois nao criei nada pra limpar o local storage e ai acabar acumulando
+    addStorage();
+    showTasksStorage();
 
- 
-    // i+=1;
     whereInput.value = "";
-        // localStorage.clear();
-
 }
+
+
+    
+
+
+
+
+
+
+
+function addStorage() {
+    localStorage.setItem('list_task', JSON.stringify(arrayOfTasks));
+    // alert("Item adicionado.");
+    
+   
+}
+
+// function removeTaskArray(){}
+
+function showTasksStorage () {
+    whereOl.innerHTML = "";       // limpo a lista toda antes de jogar lista atualizada
+    arrayOfTasks = JSON.parse(localStorage.getItem('list_task'));
+
+    for (key of arrayOfTasks){
+
+        let newTagLi = document.createElement("li");
+        let newTagSpan = document.createElement("span");
+        let newTagButton = document.createElement("button");
+
+        newTagSpan.innerText = key;
+        newTagButton.setAttribute("class", "botao-lixo");
+        newTagButton.innerText = "Delete";
+        whereOl.appendChild(newTagLi);
+        newTagLi.appendChild(newTagSpan);
+        newTagLi.appendChild(newTagButton);
+        newTagSpan.className = "span";
+        newTagLi.addEventListener("mouseover", setBorder);
+        newTagLi.addEventListener("mouseout", takeItOutBorder);
+       
+        newTagSpan.addEventListener("dblclick", setStrike);  
+        whereInput.value = "";
+    }
+    
+}
+
 
 function removeTask (event) {
 //   let whereLi = document.getElementsByTagName("li");
 //   let indexArray = indexOf(event.target);
 //   whereLi.splice(indexArray, 1); 
     event.target.parentNode.remove();
+                //PENDENTE
+                            //remover do storage também
+                            console.log(event.target.parentNode.length);
+    showTasksStorage();
 }
 
 
