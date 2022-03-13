@@ -1,0 +1,23 @@
+
+* {
+  margin: 0;
+}
+
+
+article {
+  display: inline-block;
+  width: 30%;
+  margin: 20px 15px;
+}
+
+/* ou sejaquando descer de 600 px, o article já pode ocupar tamanho de 100% da largura da tela para facilitar a disponibilização da informação */
+@media (max-width:600px){
+  article{
+    width: 100%;
+  }
+
+  /* fiz imagem sumir quando ficar muito pequena */
+  img{
+    display: none;
+  }
+}
