@@ -15,7 +15,7 @@ for ( let index = 0 ; index < respostas.length ; index = index+1 ){
     // let whereAnser01 = document.querySelector(".resp01")
     whereAnser[0].replace("'","");
     console.log(whereAnser[0]);
-    whereAnser[0].addEventListener("click", function () {
+    whereAnser[0].addEventListener("click", function (index) {
     
     var intervalo = setInterval(function() {
         // corpo da funcao

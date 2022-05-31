@@ -43,3 +43,6 @@ setTimeout(function(){ x.value=timeString+ "esse 6 é uma string pq d alinha aci
                                 d.getMinutes() + ":" +
                                 d.getSeconds();
                                 }
+
+
+

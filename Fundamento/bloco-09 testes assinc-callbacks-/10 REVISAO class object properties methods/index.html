@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>Pass a parameter into the "age()" method.</p>
+
+<p id="demo"></p>
+
+<script>
+  // criando uma classe
+class Car {                                                 
+  constructor(name, year) {                   //metodo inicial é o construtor inicializando os valores para que assim
+    this.name = name;                       // que os objetos forem criados já setar os valores das propriedades do objeto
+    this.year = year;
+  }
+  age(x) {                               //dentro da classe tem metodos (ações para manipular as propriedades)
+    return x - this.year;
+  }
+}
+
+
+let date = new Date();                                      //2 metodos pre existentes em java 
+let year = date.getFullYear();                              // Date() e getFullYear()
+
+let myCar = new Car("Ford", 2014);                            // criei um objeto "myCar", que inicia 
+document.getElementById("demo").innerHTML=                    //com propriedades/caracteristicas ford e 2014
+"My car is " + myCar.age(year) + " years old.";               //dentro do objeto existe metodo age, acionei ele
+</script>
+
+</body>
+</html>
