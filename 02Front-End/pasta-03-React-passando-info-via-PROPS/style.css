@@ -1,0 +1,30 @@
+
+* {
+  margin: 0;
+}
+
+.teste {
+color: aqua;
+}
+
+#app{
+  background-color: aqua;
+}
+
+.componente-1{
+  border: 1px solid black;
+}
+
+.componente-2{
+  border: 1px solid black;
+}
+
+.componente-3{
+  border: 1px solid black;
+}
+.componente-4{
+  border: 1px solid black;
+}
+.componente{
+  border: 1px solid black;
+}

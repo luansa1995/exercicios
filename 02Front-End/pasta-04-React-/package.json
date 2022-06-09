@@ -1,0 +1,16 @@
+{
+  "name": "pasta-02-react",
+  "version": "1.0.0",
+  "description": ">>>o que é preciso fazer rpa entender/rodar .jsx ???????",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-react": "^7.17.12"
+  }
+}
