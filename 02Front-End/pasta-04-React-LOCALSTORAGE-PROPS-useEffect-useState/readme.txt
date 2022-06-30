@@ -97,15 +97,6 @@ $ npx babel script.js -o dist.js
 <script src="script.js"></script> >>>>>>>>>>  <script src="dist.js"></script>
 
 
-
-
-
-
-
-
-
-
-
 ---------------------------------------------
 
 resumo preparo pro React(na pasta do novo projeto):
@@ -123,6 +114,24 @@ $npm install --save-dev @babel/core @babel/cli @babel/preset-react
 
 $ npm install -g nodemon          //quando voce atualiza a o seu codigo, meio que precisa 
 				//reiniciar o nodemon controla isso e reinicia sozinho quando ve mudanças
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------
+---------------------------------------------
+>>>>>>>>> instalando react agora de outra forma (create-react-app)
+
+> isso é meio que uma biblioteca
+	> que recebe todos os arquivos dessa biblioteca e temos como executa-la
+
+>precisa de node e npm
+>da pra executar com o NPM STARTe rodar no nosso NAVEGADOR
+
+> $ node -v
+> $ npm -v 
+>$ npx create-react-app luan-projeto                //"luan-projeto" qual quer nome p seu projeto  
+
+
 
 
 
