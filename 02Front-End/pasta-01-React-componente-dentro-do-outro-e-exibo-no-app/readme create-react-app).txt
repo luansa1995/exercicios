@@ -283,7 +283,7 @@ $npx babel script.js -o dist.js            //o meu arquivo ele não tem um tradu
 
 ----------------------------------------------------
 
-COMO USAR ?? 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   COMO USAR ?? 
 
 >>>PROPS
 
@@ -325,3 +325,23 @@ function Frases ({nome, idade}) {
 }
 
 export default Frases
+
+
+//////////////////////////////////////////////////
+
+>>> como usar css em React
+
+> Simples, quando voce quer que afete todo o projeto, voce altera o INDEX.CSS
+
+> mas, aqui nos organizamos em modulos e o que for especifico em um modulo voce cria um css especifico para ele. como ? segue abaixo
+	> No projeto nós criamos arquivos css dentro da pasta componentes 
+	ex >>>     ./components
+			> dentro de components vai ter 
+				>component01
+				>component02
+				>component03
+			//mas tambem terá o css INDEPENDENTE seguindo a estrutura (NomeModulo.module
+
+)
+
+
